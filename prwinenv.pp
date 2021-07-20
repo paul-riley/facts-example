@@ -23,5 +23,5 @@ class profile::prwinenv::prwinenv{
 
   windows_env {'PATH=C:\test':}
   $prpath = $facts['windows_env']['HOMEPATH']
-  notify {'PATH for windows_env has been appended!':}
+  notify {"PATH for windows_env has been appended!: ${prpath}":}
 }
